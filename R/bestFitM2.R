@@ -26,7 +26,7 @@ bestFitM2 <- function(data,x= "x",y = "y") {
   dat <- data.frame(data)
   x <- dat[,x]
   y <- dat[,y]
-  if(is.na(x) || is.na(y))
+  if(TRUE %in% is.na(x) || TRUE %in% is.na(y))
   {
     stop("There may be missing values in the variable x or y")
   } else{
